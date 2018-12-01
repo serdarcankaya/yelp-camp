@@ -1,0 +1,42 @@
+<% include ./partials/header %>
+
+    <div class="row">
+        <h1 style="text-align: center">Sign Up</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/register" method="post">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" class="form-control" type="text" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" class="form-control" type="text" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input id="email" class="form-control" type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input id="username" class="form-control" type="text" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" class="form-control" type="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="avatar">Avatar Image URL</label>
+                    <input id="avatar" class="form-control" type="text" name="avatar" placeholder="Optional*">
+                </div>
+                <div class="form-group">
+                    <label for="adminCode">Power Code</label>
+                    <input id="adminCode" class="form-control" type="password" name="adminCode" placeholder="Optional*">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Sign Up!</button>
+                </div>
+            </form>
+            <a href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+    <% include ./partials/footer %>

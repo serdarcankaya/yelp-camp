@@ -1,0 +1,52 @@
+<% include ../partials/header %>
+
+    <div class="row">
+        <h1 style="text-align: center;">Create a New Campground</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/campgrounds" method="POST" enctype="multipart/form-data"  >
+                <div class="form-group">
+                    <label for="name">Campground Name</label>
+                    <input id="name" class="form-control" type="text" name="name" 
+                    placeholder="Camp Name" required>        
+                </div>
+                <div class="form-group">
+                    <label for="image">Campground Image</label>
+                    <input id="image" class="form-control" type="file" name="image" 
+                    placeholder="Upload Imaage" accept="image/*" required>        
+                </div>
+                <div class="form-group">
+                    <label for="price">Campground Price</label>
+                    <input id="price" class="form-control" type="number" name="price" 
+                    placeholder="Camp Price" min="0.01" step="0.01" required>        
+                </div>
+                <div class="form-group">
+                    <label for="description">Campgorund Description</label>
+                    <input id="description" class="form-control" type="text" name="description" 
+                    placeholder="Description" required>
+                </div>
+                <div class="form-group">
+                    <label for="search_term">Campground Location</label>
+                    <input class="form-control" type="text" name="location" id="search_term" 
+                    placeholder="Yosemite National Park, CA" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Create Campground</button>        
+                </div>
+        </form>    
+        <a href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+
+<script>
+function activatePlacesSearch() {
+    var input = document.getElementById('search_term');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+}
+</script>
+
+<!--autocomplete = new google.maps.places.Autocomplete(input, options);    -->
+    
+    
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlRksocefopVbi2KSj00IozgdCAs-kI8Y&libraries=places&callback=activatePlacesSearch"></script>
+
+<% include ../partials/footer %>

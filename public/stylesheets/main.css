@@ -1,0 +1,48 @@
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0px;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+/* Google Maps */
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+#searchFormA {
+    height: 50px;
+}
+
+#searchButton {
+    border: none;
+    background-color: aliceblue;
+}
+
+#searchArea {
+    border: none;
+    background-color: bottom;
+}
+
+.checked {
+    color: orange;
+}
+
+.welcomeCenter {
+    text-align: center;
+}
+
+.fas campground {
+    text-size: larger;
+}
